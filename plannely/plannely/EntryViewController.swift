@@ -8,11 +8,11 @@
 import RealmSwift
 import UIKit
 
-class EntryViewController: UIViewController, UITextFieldDelegate {
+class EntryViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
     @IBOutlet var textField: UITextField!
     @IBOutlet var datePicker: UIDatePicker!
-    @IBOutlet var descField: UITextView!
+    @IBOutlet var descField: UITextField!
     
     private let realm = try! Realm()
     public var completionHandler: (() -> Void)?
@@ -35,7 +35,7 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func tappedSaveButton() {
-        if let text = textField.text, !text.isEmpty {
+        if let text = textField.text, !text.isEmpty, let desc = descField.text {
             let date = datePicker.date
             
             realm.beginWrite()
@@ -43,6 +43,7 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
             let newItem = ToDoItem()
             newItem.date = date
             newItem.title = text
+            newItem.desc = desc
             realm.add(newItem)
             
             try! realm.commitWrite()
