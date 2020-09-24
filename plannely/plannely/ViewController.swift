@@ -44,5 +44,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    @IBAction func tappedAddButton() {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "entry") as? EntryViewController else {
+            return
+        }
+        vc.completionHandler = { [weak self] in
+            self?.refresh()
+        }
+        vc.title = "New Item"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func refresh() {
+        data = realm.objects(ToDoItem.self).map({ $0 })
+        table.reloadData()
+    }
+    
 }
 

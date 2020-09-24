@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="darkpeony" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-FX-Kp4">
-                                <rect key="frame" x="-76" y="-137" width="460" height="931"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkpeony" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-FX-Kp4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.99091803680860846" green="1" blue="0.99171234153400789" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plannely" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hp-uV-Ue0">
@@ -29,6 +28,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SRr-FX-Kp4" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="FQf-WG-xA0"/>
+                            <constraint firstAttribute="bottom" secondItem="SRr-FX-Kp4" secondAttribute="bottom" id="PIy-zr-wAv"/>
+                            <constraint firstItem="SRr-FX-Kp4" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="rao-Zg-e0v"/>
+                            <constraint firstAttribute="trailing" secondItem="SRr-FX-Kp4" secondAttribute="trailing" id="tIF-Bf-0NN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
