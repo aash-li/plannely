@@ -4,11 +4,15 @@ a simple to-do list app
 
 # features: 
 
-adding items with dates and description (in progress) 
+adding and deleting items with dates and description 
 
-# future goals/features: 
+# in progress:
+
+sending notifications
 
 editing items
+
+# future goals/features:
 
 adding daily calendar to time coordinate daily to-do's
 
