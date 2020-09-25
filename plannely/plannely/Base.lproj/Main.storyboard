@@ -149,20 +149,57 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="126.38680659670166"/>
         </scene>
-        <!--Desc View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="nAj-FI-0RT">
             <objects>
-                <viewController storyboardIdentifier="desc" id="RPg-Hg-BZz" customClass="DescViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="info" id="RPg-Hg-BZz" customClass="InfoViewController" customModule="plannely" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L3i-OO-zCo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="darkpeony" translatesAutoresizingMaskIntoConstraints="NO" id="kbq-iz-VCp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5o-ex-Wqe" userLabel="itemTitle">
+                                <rect key="frame" x="20" y="50" width="77.5" height="30"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RE4-vw-0Lm" userLabel="desc">
+                                <rect key="frame" x="20" y="105" width="52" height="20"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3W-8L-oX2" userLabel="time">
+                                <rect key="frame" x="20" y="145" width="52" height="20"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="f3W-8L-oX2" firstAttribute="leading" secondItem="e9S-hA-i7Y" secondAttribute="leading" constant="20" id="2uf-Li-F4W"/>
+                            <constraint firstItem="f3W-8L-oX2" firstAttribute="top" secondItem="RE4-vw-0Lm" secondAttribute="bottom" constant="20" id="WEv-Dq-l7c"/>
+                            <constraint firstItem="w5o-ex-Wqe" firstAttribute="top" secondItem="e9S-hA-i7Y" secondAttribute="top" constant="50" id="lhk-DD-XRt"/>
+                            <constraint firstItem="w5o-ex-Wqe" firstAttribute="leading" secondItem="e9S-hA-i7Y" secondAttribute="leading" constant="20" id="qef-Wr-oqh"/>
+                            <constraint firstItem="RE4-vw-0Lm" firstAttribute="leading" secondItem="e9S-hA-i7Y" secondAttribute="leading" constant="20" id="xV6-zd-YDy"/>
+                            <constraint firstItem="RE4-vw-0Lm" firstAttribute="top" secondItem="w5o-ex-Wqe" secondAttribute="bottom" constant="25" id="zVE-60-5c1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="e9S-hA-i7Y"/>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="f3W-8L-oX2" id="rk5-x4-Ob1"/>
+                        <outlet property="descLabel" destination="RE4-vw-0Lm" id="zNW-pL-6E5"/>
+                        <outlet property="itemLabel" destination="w5o-ex-Wqe" id="9Qt-vA-U9l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hm-5d-m30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2444" y="126"/>
+            <point key="canvasLocation" x="2444" y="125.4872563718141"/>
         </scene>
     </scenes>
     <resources>
