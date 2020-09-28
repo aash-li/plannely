@@ -23,6 +23,9 @@ class InfoViewController: UIViewController {
     static let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
+        dateFormatter.dateFormat = "h:mm a 'on' MMMM dd, yyyy"
+        dateFormatter.amSymbol = "AM"
+        dateFormatter.pmSymbol = "PM"
         return dateFormatter
     }()
     
